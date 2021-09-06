@@ -4,7 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour{
+    Vector2 leftStick;
+
     void OnLeftStick(InputValue inputValue) {
-        Debug.Log("Stick direction: " +  inputValue.Get<Vector2>());
+        leftStick = inputValue.Get<Vector2>();
+    }
+
+    public Vector2 GetLeftStick() {
+        return leftStick;
     }
 }
