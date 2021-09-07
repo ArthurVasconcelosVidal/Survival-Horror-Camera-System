@@ -4,21 +4,25 @@ using UnityEngine;
 using Cinemachine;
 
 public class CameraManager : MonoBehaviour{
-    CinemachineVirtualCamera actualCamera = null;
-    CinemachineVirtualCamera lastCamera = null;
+    [SerializeField] GameObject actualCamera = null;
+    [SerializeField] GameObject lastCamera = null;
+    
+    void Start(){
+        actualCamera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject;
+    }
 
-    public CinemachineVirtualCamera GetActualCamera() {
+    public GameObject GetActualCamera() {
         return actualCamera;
     }
 
-    public CinemachineVirtualCamera GetLastCamera() {
+    public GameObject GetLastCamera() {
         return lastCamera;
     }
 
-    public void SwitchCamera(CinemachineVirtualCamera virtualCamera) {
+    public void SwitchCamera(GameObject virtualCamera){
         lastCamera = actualCamera;
         actualCamera = virtualCamera;
-        virtualCamera.enabled = true;
-        lastCamera.enabled = false;
+        virtualCamera.SetActive(true);
+        lastCamera.SetActive(false);
     }
 }

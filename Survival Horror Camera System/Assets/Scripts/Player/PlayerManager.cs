@@ -7,4 +7,5 @@ public class PlayerManager : MonoBehaviour{
     public InputManager inputManager;
     public Rigidbody rigidbody;
     public GameObject meshObject;
+    public CameraManager cameraManager; 
 }

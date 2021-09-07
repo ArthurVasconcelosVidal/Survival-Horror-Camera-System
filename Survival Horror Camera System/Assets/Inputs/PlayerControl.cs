@@ -23,7 +23,7 @@ public class @PlayerControl : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""fee56e95-1dbc-4f50-992f-7933d2e0b6b4"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone(min=0.3)"",
                     ""interactions"": """"
                 }
             ],
