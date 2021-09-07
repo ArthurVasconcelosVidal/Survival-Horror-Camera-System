@@ -22,9 +22,12 @@ public class MovimentManager : MonoBehaviour{
         if (actualDirection != Vector3.zero){
             playerManager.rigidbody.MovePosition(transform.position + actualDirection.normalized * velocity * Time.deltaTime);
             MeshRotation(actualDirection);
+
         }
         else
             SetCamDirections();
+
+        playerManager.animationManager.SetWalkinState(actualDirection.magnitude);
     }
 
     void MeshRotation(Vector3 direction) {
