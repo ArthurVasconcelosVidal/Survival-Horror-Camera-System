@@ -27,5 +27,5 @@ The system allows the switching of cameras from triggers positioned in the map, 
 - Link: https://youtu.be/dewiViqvxZs
 
 ## Agradecimentos especiais / Special thanks
-- Mix & Jam (Character):
+- Mix & Jam (Character model/Animations):
 https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456
